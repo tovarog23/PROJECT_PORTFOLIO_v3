@@ -127,7 +127,6 @@ header:hover:before{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
     width: 80%;
     margin: auto;
     padding-top: 10px;
@@ -177,16 +176,6 @@ input[type="submit"]:hover{
 input[type="submit"]:active{
     background-color: rgb(39, 39, 39);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* FOOTER STYLE */
