@@ -127,7 +127,7 @@ header:hover:before{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
     margin: auto;
     padding-top: 10px;
@@ -299,6 +299,10 @@ header li:hover{
     position: relative;
     text-align: center;
     padding-bottom: 50px;
+}
+
+#retry a:hover{
+    color: aqua;
 }
 
 
