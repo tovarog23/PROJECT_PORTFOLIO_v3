@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTM!</title>
+    <link rel="icon" href="{{ url_for('static', filename='resources/icons/home.png') }}">
+    
+    <!-- <link rel="stylesheet" href="./resources/styling/normalize.css"> -->
+    <link rel="stylesheet" href="./resources/styling/reset.css">
+    <link rel="stylesheet" href="./resources/styling/about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <div class="overlay-content">
+            <a href="./projects_software.html">Programming</a>
+            <a href="./projects_structural.html">Structural Engineering</a>
+        </div>
+    </div>
+    <header>
+        <h1 class="header_title"><a href="./index.html">RTM</a></h1>
+        <nav>
+            <ul>
+                <li><a id="AboutMe" class="hover_an" href="./about_Me.html">About Me</a></li>
+                <li id="Projects"><a class="hover_an">Projects</a></li>
+                <li><a id="Contact" class="hover_an" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title" id="slide-left">Get to know me</h1>
+        <section class="General">
+            <div class="keywords">
+                <h2 id="k1">Enthusiastic</h2>
+                <h2 id="k2">Curious</h2>
+                <h2 id="k3">Striving</h2>
+            </div>
+            <div class="aboutMe">
+                <div id="slide-right"><p style="font-weight:bold;font-style: italic;">An engineer and most recently an aspiring developer...</p>For the past 4 years I have been engaged in the structural engineering industry focusing on the design of new buildings and structures and since last year I started working on some personal projects to improve my abilities as an aspiring developer. I have always been extremely passionate about my current career, yet I have always enoyed programming since I was first introduced to C in college. So this led me to ask myself: Why not do both? As I keep learning and nurturing my career as a structural engineer I am also learning on the side how to code effectively while also developing some personal projects related and unrelated to the construction industry. My objective is to be able to develop my own web applications that can provide useful tools and resources for the construction industry and more!</div>
+            </div>
+        </section>
+        <h1 class="skillset" id="slide-right">Skillset</h1>
+        <section class="profession">  
+            <div class="images">
+                <div id="forward" class="forward">
+                </div>
+                <div id="backward" class="backward">
+                </div>
+            </div>
+            <div class="description">
+                <h2>STRUCTURAL ENGINEERING</h2>
+                <p id="slide-right">As a professional working in the structural engineering industry, I have been able to learn all about the design of new buildings and structures, focusing mainly on lowrise and midrise construction. I have gained knowledge about the design and behaviour of multiple structural materials such as Concrete, masonry, steel and wood. I have also been able to work with different codes and standards, including:</p>
+                <br>
+                <ul class="codes" id="slide-right">
+                    <li>United States:</li>
+                    <ul id="second">
+                        <li class="item1">ASCE, IBC</li> 
+                        <li>AISC, ACI, TMS, NDS, AISI</li>
+                    </ul>
+                    <li>Mexico:</li>
+                    <ul id="second">
+                        <li>NTC-17, MDOC CFE</li>
+                    </ul>
+                    <li>Canada:</li>
+                    <ul id="second">
+                        <li>NBCC, CSA</li>
+                    </ul>
+                </ul>
+                <br>
+                <p id="slide-right">To know more about my career as a structural engineer, you can <a href="">click here</a></p>
+            </div>
+        </section>
+        <section class="software">
+            <div class="description">
+                <h2>SOFTWARE DEVELOPMENT</h2>
+                <p id="slide-right">What better way to compliment by abilities as a structural engineer than getting involved in software development and programming?</p>
+                <br>
+                <p id="slide-right">In 2022, I decided to start a new journey and become a self taught developer! Since my early years college, I have always found programming as a very useful/fun tool that can bring considerable value in any industry, including structural engineering. So far I have experimented and learned a variety of languages and a couple of frameworks, mostly focusing at the moment on web development.</p>
+                <br>
+                <p id="slide-right">My objective is to become a fullstack developer capable of developing applications that can be applied in the construction and structural engineering industries. If you want to learn more about my personal projects, you can <a href="">click here!</a></p>
+                <br>
+                <p></p>
+            </div>
+            <div class="software_images">
+                <img id="css" class="fade-in" src="./resources/icons/CSS.png" alt="CSS">
+                <img id="html" class="fade-in" src="./resources/icons/HTML.png" alt="HTML">
+                <img id="js" class="fade-in" src="./resources/icons/javascript.png" alt="javascript">
+                <img id="python" class="fade-in" src="./resources/icons/python.png" alt="python">
+                <img id="matlab" class="fade-in" src="./resources/icons/matlab.png" alt="matlab">
+                <img id="qt" class="fade-in" src="./resources/icons/QT_framework.png" alt="qt">
+                <img id="sql" class="fade-in" src="./resources/icons/MySQL.png" alt="SQL">
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="basic_menu">    
+            <ul class="basic_menu_list">
+                <li><a href="./about_Me.html">About Me</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+            <div class="small_logo">
+                <h1 class="header_title"><a href="./index.html">RTM</a></h1>
+            </div>
+            <div class="email_contact">
+                <a href="./contact.html">Email</a>
+            </div>
+        </div>
+        <div class="contact_info">
+            <a href="https://www.linkedin.com/in/rogelio-tovar-medel-394217130"><img src="./resources/icons/linkedin.png" alt="Linkedin"></a>
+            <a href="https://github.com/tovarog23"><img src="./resources/icons/github.png" alt="Github"></a>
+            <a href="./contact.html"><img src="./resources/icons/gmail.png" alt="Gmail"></a>
+        </div>
+    </footer>
+    <script src="./resources/scripts/about_me_v2.js"></script>
+    <!--<script src="./resources/scripts/"></script>-->
+    
+    
+</body>
+</html>
