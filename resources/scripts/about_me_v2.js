@@ -1,9 +1,6 @@
 
 let imageArray = ['./resources/images/skillset/LA PORTA STEEL.JPG', './resources/images/skillset/CONNECTIONS.PNG', './resources/images/skillset/DISPLACEMENTS.PNG', './resources/images/skillset/DRAKE ARCH.PNG', './resources/images/skillset/DRAKE ARCH 2.PNG', './resources/images/skillset/FAIRFAX CORNERS.jpg', './resources/images/skillset/Image3.png'];
 
-// let imageArray_2 = ['./resources/images/software/BEAM_APP_python.PNG','./resources/images/software/BEAM_APP_python_2.PNG'];
-
-// Function to handle image rotation
 // Function to handle image rotation
 function rotateImages() {
     const slideshow = document.querySelector('.images');
@@ -20,13 +17,14 @@ function rotateImages() {
       const nextImage = createImageElement(imageArray[currentImageIndex]);
       nextImage.classList.add('entering-from-right');
       slideshow.appendChild(nextImage);
-  
+      
       setTimeout(function () {
         currentImage.style.display = 'none';
         currentImage.classList.remove('entering-from-left');
+        currentImage.remove();
         nextImage.classList.remove('entering-from-right');
         nextImage.classList.add('active');
-      }, 100);
+      }, 200); // sets the time between each image transition
     }
     
     function showPreviousImage() {
@@ -42,9 +40,10 @@ function rotateImages() {
       setTimeout(function () {
         currentImage.style.display = 'none';
         currentImage.classList.remove('entering-from-right');
+        currentImage.remove();
         previousImage.classList.remove('entering-from-left');
         previousImage.classList.add('active');
-      }, 100);
+      }, 200); // sets the time between each image transition
     }
   
     function createImageElement(src) {

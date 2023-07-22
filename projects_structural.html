@@ -2,10 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Structures!</title>
+    <link rel="icon" href="./resources/icons/home.png">
+    <!-- <link rel="stylesheet" href="./resources/styling/normalize.css"> -->
+    <link rel="stylesheet" href="./resources/styling/reset.css">
+    <link rel="stylesheet" href="./resources/styling/structures.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <base href="/">
 </head>
 <body>
-    <p>In construction</p>
+    <div id="dark-overlay"></div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <div class="overlay-content">
+            <a href="./projects_software.html">Programming</a>
+            <a href="./projects_structural.html">Structural Engineering</a>
+        </div>
+    </div>
+    <header>
+        <h1 class="header_title"><a href="./index.html">RTM</a></h1>
+        <nav>
+            <ul>
+                <li><a id="AboutMe" class="hover_an" href="./about_Me.html">About Me</a></li>
+                <li id="Projects"><a class="hover_an">Projects</a></li>
+                <li><a id="Contact" class="hover_an" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title">Structural Engineering</h1>
+        <h2 class="portfolio">PORTFOLIO</h2>
+        <div class="background-video">
+            <video autoplay muted loop id="building-video" src="./resources/videos/mixkit-buildings-under-construction-aerial-view-4010-medium.mp4"></video>
+            <div class="overlayVideo"></div>
+        </div>
+        <p class="professional-title">PROFESSIONAL PROJECTS</p>
+        <!-- Pop up div when an image container is selected to display relevant information -->
+        <div class="pop-up" data-effect="mfp-zoom-in" style="visibility: hidden;">
+            <div class="images">
+                <div id="forward" class="forward">
+                </div>
+                <div id="backward" class="backward">
+                </div>
+            </div>
+            <div class="project-description">
+                <h1 class="project-title">DRAKE II</h1>
+                <br>
+                <a href="javascript:void(0)" class="closebtnPop">&times;</a>
+                <p class="popup-Text"><span class="secondary-title">LOCATION:</span> Washington D.C. <br><br><br><span class="secondary-title">TYPE:</span> Residential <br><br><br> <span class="secondary-title">DESCRIPTION:</span> 
+                Residential building composed of a concrete podium and cold formed steel bearing walls at subsequent levels. The lateral system at the podium consists of ordinary reinforced concrete shear walls while strapped shear walls were used on all CFS residential levels. In this case, I was responsible for the design of the lateral system, including the verification of lateral forces received from the Engineer of Record applying the equivalent lateral force procedure. All elements in all shear walls were designed and detailed. <br><br><br><span class="secondary-title">CODES APPLIED:</span> ASCE, AISC, AISI, ACI.
+                </p>
+            </div>
+        </div>
+        <section class="general_container">
+            <div class="img_container one" id="item1">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Drake/DRAKE_ARCH.PNG" alt="">
+                <p>DRAKE II</p>
+            </div>
+            <div class="img_container one" id="item2">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Fairfax/FAIRFAX_CORNERS_ARCH.PNG" alt="">
+                <p>FAIRFAX CORNERS</p>
+            </div>
+            <div class="img_container one" id="item3">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/La_Porta/La_Porta_Building.JPG" alt="">
+                <p>LA PORTA</p>
+            </div>
+            <div class="img_container one" id="item4">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Hotel_Indigo/HOTEL_INDIGO_ARCH_3D.PNG" alt="">
+                <p>HOTEL INDIGO</p>
+            </div>
+            <div class="img_container one" id="item5">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Viktor_Frankl/RVTSCHOOL.JPG" alt="">
+                <p>VIKTOR FRANKL</p>
+            </div>
+            <div class="img_container one" id="item6">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Fairfield-Inn/fairfield_arch.PNG" alt="">
+                <p>FAIRFIELD INN</p>
+            </div>
+            <div class="img_container one" id="item7">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/PetsGarden/BIM_4.JPG" alt="">
+                <p>PETSGARDEN</p>
+            </div>
+            <div class="img_container one" id="item8">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Crown_Plaza/render.PNG" alt="">
+                <p>CROWN PLAZA</p>
+            </div>
+            <div class="img_container one" id="item9">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Embassy_Suites/arch.PNG" alt="">
+                <p>EMBASSY SUITES</p>
+            </div>
+            <div class="img_container one" id="item10">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Milenio/BIM_3.JPG" alt="">
+                <p>MILENIO APARTMENTS</p>
+            </div>
+            <div class="img_container one" id="item11">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Woodsprings/woodsprings.PNG" alt="">
+                <p>WOODSPRING SUITES</p>
+            </div>
+            <div class="img_container one" id="item12">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/Cruz_Roja/CONCRETO_COMPLETO_8K.jpg" alt="">
+                <p>CRUZ ROJA</p>
+            </div>
+            <div class="img_container one" id="item13">
+                <div class="img-overlay"></div>
+                <img src="./resources/images/projects/BridgeBar/ARCH.png" alt="">
+                <p>BRIDGE BAR</p>
+            </div>
+        </section>
+        <section class="academic">
+            <p class="professional-title">ACADEMIC PROJECTS</p>
+            <div class="general_container">
+                <div class="img_container" id="item11">
+                    <div class="img-overlay"></div>
+                    <img src="./resources/images/academic/MIDASLATAM/Image3.png" alt="">
+                    <p>MIDAS CHALLENGE</p>
+                </div>
+                <div class="img_container" id="item12">
+                    <div class="img-overlay"></div>
+                    <img src="./resources/images/academic/Steel/STEEL DESIGN PROJECT2.JPG" alt="">
+                    <p>STEEL FINAL</p>
+                </div>
+                <div class="img_container" id="item13">
+                    <div class="img-overlay"></div>
+                    <img src="./resources/images/academic/UBC/DISPLACEMENTS.PNG" alt="">
+                    <p>MASONRY DESIGN</p>
+                </div>
+                <div class="img_container" id="item13">
+                    <div class="img-overlay"></div>
+                    <img src="./resources/images/academic/Integrador/CONCRETE DESIGN .JPG" alt="">
+                    <p>CAPSTONE</p>
+                </div>
+            </div>
+        </section>
+        <section class="skills-abilities">
+            <h2>SOFTWARE AND TOOLS</h2>
+            <p>Throughout my years of experience as a structural engineer, I have learned how to use and apply several tools that have helped me enhance the analysis and design process. Some of these tools include the following ones: </p>
+            <div class="tools-container">
+                <img src="./resources/icons/structural_software/revit.png" alt="Revit">
+                <img src="./resources/icons/structural_software/autocad.png" alt="Autocad">
+                <img src="./resources/icons/structural_software/robot.png" alt="Robot Structural Analysis">
+                <img src="./resources/icons/structural_software/sap2000.png" alt="SAP2000">
+                <img src="./resources/icons/structural_software/etabs.png" alt="ETABS">
+                <img src="./resources/icons/structural_software/ideastatica.png" alt="Idea Statica">
+                <img src="./resources/icons/structural_software/midas.png" alt="MIDAS Gen">
+                <img src="./resources/icons/structural_software/ram.png" alt="RAM Elements">
+                <img src="./resources/icons/structural_software/connection.png" alt="RAM Connection">
+                <img src="./resources/icons/structural_software/enercalc.png" alt="ENERCALC">
+                <img src="./resources/icons/structural_software/cfsdesigner.png" alt="CFS Designer">
+                <img src="./resources/icons/structural_software/anchor_designer.jpg" alt="Anchor Designer">
+                <img src="./resources/icons/structural_software/oasys.png" alt="OASYS GSA">
+                <img src="./resources/icons/structural_software/risa.png" alt="RISA Software">
+                <img src="./resources/icons/structural_software/sketchup.png" alt="Sketchup">
+                <img src="./resources/icons/structural_software/twinmotion.png" alt="Twinmotion">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="basic_menu">    
+            <ul class="basic_menu_list">
+                <li><a href="./about_Me.html">About Me</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+            <div class="small_logo">
+                <h1 class="header_title"><a href="./index.html">RTM</a></h1>
+            </div>
+            <div class="email_contact">
+                <a href="./contact.html">Email</a>
+            </div>
+        </div>
+        <div class="contact_info">
+            <a href="https://www.linkedin.com/in/rogelio-tovar-medel-394217130" target="_blank"><img src="./resources/icons/linkedin.png" alt="Linkedin"></a>
+            <a href="https://github.com/tovarog23" target="_blank"><img src="./resources/icons/github.png" alt="Github"></a>
+            <a href="./contact.html"><img src="./resources/icons/gmail.png" alt="Gmail"></a>
+        </div>
+    </footer>
+    <!-- <script src="./node_modules/requirejs/require.js"></script> -->
+
+    <script src="./resources/scripts/structural.js"></script>
 </body>
 </html>

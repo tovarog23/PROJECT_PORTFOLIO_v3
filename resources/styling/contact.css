@@ -316,15 +316,17 @@ header li:hover{
     text-align: center;
     margin-top: 30px;
     font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
 }
   
 .overlay a {
-padding: 8px;
-text-decoration: none;
-font-size: 36px;
-color: aliceblue;
-display: block;
-transition: 0.3s;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: aliceblue;
+    display: block;
+    transition: 0.3s;
+    background-color: transparent;
 }
   
 .overlay a:hover, .overlay a:focus {
@@ -332,10 +334,10 @@ transition: 0.3s;
 }
   
 .overlay .closebtn {
-position: absolute;
-top: 20px;
-right: 45px;
-font-size: 60px;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 }
 
 @media screen and (max-height: 450px) {
