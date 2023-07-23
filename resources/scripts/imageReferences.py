@@ -1,7 +1,7 @@
 import os 
 import sys
 
-searchPath = './resources/images/projects'
+searchPath = './resources/images/academic'
 
 totalFiles = os.listdir(searchPath)
 

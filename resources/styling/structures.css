@@ -18,6 +18,15 @@ header{
     z-index: 10;
     background-color: rgb(0, 0, 0, 0.8);
     backdrop-filter: blur(6px);
+    
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 header h1 a{
@@ -111,6 +120,8 @@ header:hover:before{
     top: 350px;
     z-index: 1;
     background-color: transparent;
+    transition: 1s ease-in-out;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .background-video{
@@ -144,6 +155,23 @@ header:hover:before{
     background-color:rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+@keyframes backgroundMove{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.darkOverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 1);
+    left: 100%;
+    z-index: 2;
+    animation: backgroundMove 1s ease-in;
+}
 
 .portfolio{
     position: absolute;
@@ -157,6 +185,8 @@ header:hover:before{
     text-align: center;
     background-color: transparent;
     text-shadow: -2px 2px rgb(62, 62, 62);
+    transition: 1s ease-in-out;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .general_container{
@@ -169,16 +199,28 @@ header:hover:before{
     flex-wrap:wrap;
     margin-bottom: 50px;
 }
+
+
+#slideTitle{
+    transform: translateX(-15%);
+    opacity: 0.15;
+    transition: 1s;
+}
+
 .professional-title{
+    /* display:contents; */
     font-size: 2rem;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    margin-bottom: 50px;
+    margin: auto;
+    margin-bottom: 20px;
     width: 100%;
     height: auto;
     line-height: 3rem;
-    border-bottom: 1px solid gainsboro;
+    /* border-bottom: 1px solid gainsboro; */
+    /* animation: fadeIn 1s ease-in; */
 }
+
 
 .img_container{
     width: 450px;
@@ -191,6 +233,8 @@ header:hover:before{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: 0.5s ease-in;
 }
 .img_container img{
     object-fit:cover;
@@ -247,32 +291,49 @@ header:hover:before{
 
 /* POP UP STYLE */
 
-/* @keyframes popUpEffect{
+@keyframes popUpEffect{
     0%{
         opacity: 0;
-        transform: scale(0);
+        transform: translate(-100%, 0);
     }
     100%{
         opacity: 1;
-        transform: scale(1);
+        transform: translate(-50%, 0);
     }
-} */
+}
+@keyframes ExitPopUpEffect{
+    0%{
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+}
 
+
+main{
+    position: relative;
+}   
 .pop-up{
     position: fixed;
-    background-color: rgb(68, 68, 68, 0.5);
-    /* background-color: brown; */
+    background-color: rgba(75, 73, 73, 0.5);
     backdrop-filter: blur(30px);
     z-index: 30;
+    top: 10%;
+    left: 50%;
     width: 80%;
     height: 80%;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,10%);
+    /* height: 80%; */
+    /* top: 0;
+    left: 50%; */
+    transform: translate(-50%, 0);
     display: flex;
     justify-content: center;
     margin: auto;
-    transform-origin: left;
+    /* transform-origin: left; */
+    animation: popUpEffect 0.1s ease-in-out;
 }
 .pop-up .images{
     width: 100%;
@@ -435,6 +496,64 @@ header:hover:before{
     height: auto;
     margin: 30px;
 }
+
+/* .tools-container img[alt="Revit"]{
+    transition: opacity 1s ease;
+} */
+.fade-in{
+    opacity: 0;
+}
+
+img[alt="Revit"]{
+    transition: opacity 0.5s ease;
+}
+img[alt="Autocad"]{
+    transition: opacity 0.8s ease;
+}
+img[alt="Robot Structural Analysis"]{
+    transition: opacity 1.1s ease;
+}
+img[alt="SAP2000"]{
+    transition: opacity 1.4s ease;
+}
+img[alt="ETABS"]{
+    transition: opacity 1.7s ease;
+}
+img[alt="Idea Statica"]{
+    transition: opacity 2s ease;
+}
+img[alt="MIDAS Gen"]{
+    transition: opacity 2.3s ease;
+}
+img[alt="RAM Elements"]{
+    transition: opacity 2.6s ease;
+}
+img[alt="RAM Connection"]{
+    transition: opacity 2.9s ease;
+}
+img[alt="ENERCALC"]{
+    transition: opacity 3.2s ease;
+}
+img[alt="CFS Designer"]{
+    transition: opacity 3.5s ease;
+}
+img[alt="Anchor Designer"]{
+    transition: opacity 3.8s ease;
+}
+img[alt="OASYS GSA"]{
+    transition: opacity 4.1s ease;
+}
+img[alt="RISA Software"]{
+    transition: opacity 4.4s ease;
+}
+img[alt="Sketchup"]{
+    transition: opacity 4.7s ease;
+}
+img[alt="Twinmotion"]{
+    transition: opacity 5s ease;
+}
+
+
 
 /* FOOTER STYLING */
 footer{
