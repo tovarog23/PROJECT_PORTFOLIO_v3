@@ -149,6 +149,7 @@ let headerSection = document.getElementsByTagName('header');
 let popUpBackground = document.getElementById('dark-overlay');
 
 const fetchText = (textPath) =>{
+  console.log('final text path: ', textPath);
   fetch(textPath)
     .then(response => response.text())
     .then(text => {
@@ -225,7 +226,7 @@ const openPopup = (event) =>{
   }
   else{
     console.log('CONTAINER 2')
-    let textPath = pathBuilderText(nameTag, 'academic');
+    textPath = pathBuilderText(nameTag, 'academic');
     console.log(textPath);
   }
   fetchText(textPath);

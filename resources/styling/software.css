@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    
+    background-color: black;
+    color: aliceblue;
+    /* border: 1px solid red; */
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    width:100%;
+    height: 100px;
+    z-index: 10;
+    background-color: rgb(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+}
+header h1 a{
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+    margin-left: 20px;
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+}
+header h1{
+    background-color: rgba(0, 0, 0, 0);
+    
+}
+
+
+.header_title,
+nav{
+    display: inline-block;
+    background-color: transparent;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+header li{
+    margin:0px 10px;
+    font-family: 'Unbounded', cursive;
+    list-style: none;
+    background-color: transparent;
+}
+header li a{
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    background-color: transparent;
+}
+
+header:before{
+    position: absolute;
+    content:"";
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 51%, rgba(83,82,82,1) 92%, rgba(98,98,98,1) 100%);
+    transition:all 1.0s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: color 0.7s ease;
+}
+
+header:hover:before{
+    top: 0;
+}
+
+.hover_an::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: cyan;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover_an:hover{
+    color: cyan;
+}
+
+.hover_an:hover::after{
+    color: cyan;
+    text-decoration: underline; 
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+main .container{
+    width: 100;
+    text-align: center;
+}
+.container img{
+    width: 50%;
+    height: auto;
+}
+.container p{
+    font-size: 3rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/* FOOTER STYLING */
+footer{
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid antiquewhite;
+    
+}
+
+footer .basic_menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    align-items:start;
+    margin-top: 50px;
+    
+}
+footer .small_logo h1 a{
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.basic_menu .basic_menu_list{
+    position: absolute;
+    left: 150px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Quicksand', sans-serif;
+    line-height: normal;
+}
+.basic_menu .email_contact{
+    position: absolute;
+    right: 150px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+footer .contact_info{
+    display: flex;
+}
+
+footer .contact_info img{
+    width: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+header li:hover{
+    cursor: pointer;
+}
+
+.basic_menu_list li a:hover, 
+.email_contact p:hover{
+    color: aqua;
+    cursor: pointer;
+}
+
+.email_contact a:hover{
+    color: aqua;
+}
+
+
+
+
+/* OVERLAY MENU STYLE */
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.9);
+    overflow-x: hidden; /* DISABLE HORIZONTAL SCROLL*/
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
+    
+}
+  
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: aliceblue;
+    display: block;
+    transition: 0.3s;
+    background-color: transparent;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: aqua;
+}
+  
+.overlay .closebtn {
+position: absolute;
+top: 20px;
+right: 45px;
+font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
