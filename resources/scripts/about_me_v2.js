@@ -121,5 +121,9 @@ projectButton.onclick = openNav;
 let exitButton = document.getElementsByClassName("closebtn");
 exitButton[0].onclick = closeNav;
 
+let secondProjectButton = document.getElementById('Projects2');
+secondProjectButton.onclick = openNav;
+
+
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
