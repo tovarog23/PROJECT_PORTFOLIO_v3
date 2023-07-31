@@ -1,5 +1,15 @@
 
 let imageArray = ['./resources/images/skillset/LA PORTA STEEL.JPG', './resources/images/skillset/CONNECTIONS.PNG', './resources/images/skillset/DISPLACEMENTS.PNG', './resources/images/skillset/DRAKE ARCH.PNG', './resources/images/skillset/DRAKE ARCH 2.PNG', './resources/images/skillset/FAIRFAX CORNERS.jpg', './resources/images/skillset/Image3.png'];
+let newVar = document.getElementById('slide-left');
+let slider = document.getElementById('slide-right');
+console.log(newVar.id);
+console.log(slider.id);
+console.log(newVar.style.display);
+console.log(newVar.style.opacity);
+console.log(slider.style.opacity);
+console.log(document.documentElement.clientHeight);
+console.log(newVar.getBoundingClientRect());
+newVar.style.opacity = 1;
 
 // Function to handle image rotation
 function rotateImages() {
@@ -108,6 +118,7 @@ const handleScroll = () =>{
   })
   slideLeftElements.forEach((element)=>{
     if(isElementInViewport(element)){
+      // element.style.animation = '1s slideInLeft linear';
       element.style.opacity = 1;
       element.style.transform = 'translateX(0)';
     }
@@ -127,3 +138,5 @@ secondProjectButton.onclick = openNav;
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
+
+console.log(isElementInViewport(newVar));

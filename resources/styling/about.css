@@ -422,7 +422,12 @@ header li:hover{
 .fade-in{
     opacity: 0;
 }
-
+/* .title{
+    opacity: 0;
+} */
+/* .title{
+    animation: 1s slideInLeft linear ;
+} */
 
 #css{
     transition: opacity 0.5s ease;
@@ -642,7 +647,7 @@ font-size: 60px;
         /* border: 10px solid blue; */
         width: 90%;
         min-width: unset;
-        height: 1300px;
+        height: 1100px;
     }
     .profession .images{
         width: 100%;
@@ -663,7 +668,8 @@ font-size: 60px;
         width: 90%;
         min-width: unset;
         height: auto;
-        margin-top: 100px;
+        margin-top: 0px;
+        margin-bottom: 100px;
         
     }
     .software .description{
@@ -753,6 +759,7 @@ font-size: 60px;
     /* MODIFY FOOTER FIRST PORTION */
     footer{
         height: 400px;
+        /* border: 10px solid greenyellow; */
     }
     footer .basic_menu{
         display: none;
@@ -766,6 +773,7 @@ font-size: 60px;
         font-family: 'Quicksand', sans-serif;
         list-style: none;
         height: 60%;
+        /* border: 10px solid brown; */
     }
     footer .mobile_footer li{
         text-decoration: none;
@@ -784,17 +792,31 @@ font-size: 60px;
 @media only screen and (max-width: 450px){
     header{
         position: unset;
+        /* border: 10px solid blue; */
+    }
+    header h1{
+        /* border: 10px solid purple; */
+        text-align: center;
+        margin: auto;
+    }
+    header h1 a{
+        text-align: center;
+        margin: auto;
     }
     main .title{
-        display: block;
-        position:unset;
+        display:block;
+        position:relative;
+        top: 0;
+        left: 0;
+        transform: translate(-50%);
         text-align: center;
         /* border: 10px solid red; */
         margin: auto;
-        margin-top: 50px;
+        margin-top: 100px;
         margin-bottom: 80px;
         font-size: 2.5rem;
-        visibility: visible;
+        width: 90%;
+
     }
     .General{
         display: block;
@@ -805,6 +827,7 @@ font-size: 60px;
         height: auto;
         margin-bottom: 100px;
         min-width:unset;
+        
     }
     .aboutMe{
         display: block;
@@ -819,7 +842,6 @@ font-size: 60px;
         margin: auto;
     }
     .skillset{
-        width: auto;
         text-align: center;
         display: block;
         margin: auto;
@@ -828,6 +850,7 @@ font-size: 60px;
         margin-top: 50px;
         margin-bottom: 50px;
         font-size: 2.5rem;
+        width: 80%;
     }
     .profession{
         display: block;
@@ -836,7 +859,7 @@ font-size: 60px;
         /* border: 10px solid blue; */
         width: 90%;
         min-width: unset;
-        height: 1300px;
+        height: 1500px;
     }
     .profession .images{
         width: 100%;
@@ -858,6 +881,7 @@ font-size: 60px;
         min-width: unset;
         height: auto;
         margin-top: 100px;
+        margin-bottom: 100px;
         
     }
     .software .description{
@@ -936,10 +960,26 @@ font-size: 60px;
     }
     header nav{
         margin: 20px 0px;
-        
+        /* border: 10px solid white;     */
     }
+    /* .software .description p{
+        border: 10px solid green;
+    } */
+    /* .software_images{
+        border: 10px solid pink;
+    } */
+    body, html{
+        width: 100%;
 
-
+    }
+    header, main, footer{
+        width: 100%;
+    }
+    #slide-left{
+        transform: translateX(0);
+        opacity: 0;
+        transition: 1s;
+    }
 
 }
 
