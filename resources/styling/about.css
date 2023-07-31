@@ -108,15 +108,16 @@ header:hover:before{
 
 .General{
     display: flex;
-    width: 60%;
+    width: 70%;
     justify-content: center;
-    height: 400px;
+    height: 500px;
     align-items: center;
-    /* border: 1px solid red; */
+    /* border: 10px solid red; */
     position: relative;
     top: 200px;
-    margin: 0 auto;
     min-width: 1000px;
+    text-align: center;
+    margin: auto;
 
 }
 
@@ -140,7 +141,7 @@ header:hover:before{
 }
 
 .aboutMe{
-    flex-grow: 10;
+    /* flex-grow: 10; */
     width: 50%;
     /* border: 1px solid blue; */
     font-size: 1.3rem;
@@ -161,7 +162,7 @@ header:hover:before{
     display: flex;
     justify-content: center;
     margin: auto;
-    /* border: 1px solid purple; */
+    /* border: 10px solid greenyellow; */
     margin-top: 400px;
     width: 70%;
     height: 570px;
@@ -260,9 +261,9 @@ header:hover:before{
     display: flex;
     justify-content: center;
     margin: auto;
-    /* border: 1px solid purple; */
+    /* border: 10px solid purple; */
     margin-top: 0;
-    width: 60%;
+    width: 70%;
     height: 570px;
     margin-bottom: 200px;
     min-width: 1000px;
@@ -276,11 +277,17 @@ header:hover:before{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
+    object-fit: contain;
+    
 }
 .software_images img{
     width: 30%;
     background-color: transparent;
+    /* border: 1px solid blue; */
+    max-height: 30%;
+    object-fit:contain;
 }
+
 
 footer{
     width: 100%;
@@ -341,6 +348,11 @@ footer a{
     text-decoration: none;
 }
 
+footer .mobile_footer{
+    display: none;
+}
+
+
 header li:hover{
     cursor: pointer;
 }
@@ -354,6 +366,7 @@ header li:hover{
 .email_contact a:hover{
     color: aqua;
 }
+
 
 /* INITIAL ANIMATIONS - WEBPAGE LOADING */
 
@@ -505,6 +518,431 @@ font-size: 60px;
       right: 35px;
     }
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1145px) and (min-width:870px){
+    header{
+        position: relative;
+        
+    }
+    main .title{
+        display: block;
+        position:unset;
+        text-align: center;
+        /* border: 10px solid red; */
+        margin: auto;
+        margin-top: 50px;
+    }
+    .General{
+        margin: auto;
+        width: 80%;
+        min-width:auto;
+        top: 100px;
+    }
+    .General p{
+        font-size: 0.8rem;
+
+    }
+    .General #slide-right{
+        font-size: 1.2rem;
+    }
+    .keywords h2{
+        font-size: 2rem;
+    }
+
+    .skillset{
+        text-align: center;
+        display: block;
+        margin: auto;
+        position: unset;
+        /* border: 10px solid yellow; */
+        margin-top: 200px;
+    }
+    
+    .profession{
+        margin: auto;
+        width: 80%;
+        min-width: 80%;
+        margin-top: 100px;
+        height: 750px;
+    }
+    .profession p{
+        font-size: 1.2rem;
+           
+        
+    }
+
+    .software{
+        margin: auto;
+        width: 80%;
+        min-width: auto;
+        margin-top: 100px;
+        height: 700px;
+        margin-bottom: 200px;
+    }
+    .software p{
+        font-size: 1.2rem;
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width:870px)and (min-width: 450px){
+    header{
+        position: unset;
+    }
+    main .title{
+        display: block;
+        position:unset;
+        text-align: center;
+        /* border: 10px solid red; */
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+    .General{
+        display: block;
+        margin: auto;
+        /* border: 10px solid red;         */
+        position: unset;
+        width: 90%;
+        height: auto;
+        margin-bottom: 100px;
+        min-width:unset;
+    }
+    .aboutMe{
+        display: block;
+        width: 100%;
+        height: 50%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .keywords{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+    .skillset{
+        text-align: center;
+        display: block;
+        margin: auto;
+        position: unset;
+        /* border: 10px solid yellow; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .profession{
+        display: block;
+        position: unset;
+        margin: auto;
+        /* border: 10px solid blue; */
+        width: 90%;
+        min-width: unset;
+        height: 1300px;
+    }
+    .profession .images{
+        width: 100%;
+        height: 40%;    
+        margin: auto;
+    }
+    .profession .description{
+        width: 100%;
+        height: 60%;
+        margin: auto;
+    }
+
+    .software{
+        display: block;
+        position: unset;
+        margin: auto;
+        /* border: 10px solid purple; */
+        width: 90%;
+        min-width: unset;
+        height: auto;
+        margin-top: 100px;
+        
+    }
+    .software .description{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+    .software .software_images{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+    footer{
+        height: 400px;
+        /* border: 10px solid greenyellow; */
+    }
+    footer .basic_menu{
+        justify-content: center;
+        height: 60%;
+    }
+    .basic_menu .basic_menu_list{
+        left: 90px;
+    }
+    .basic_menu .email_contact{
+        right: 90px;
+    }
+    footer .contact_info{
+        /* border: 10px solid red; */
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+    }
+    footer .contact_info a{
+        width: 20%;
+        margin: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom:50px;
+        margin-top: 50px;
+        /* background-color: aqua; */
+    }
+    footer .contact_info img{
+        text-align: center;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: auto;
+        
+    }
+    .keywords{
+        /* border: 10px solid brown; */
+        width: 100%;
+        padding-left: 0px;
+        min-width:unset;
+        margin: auto;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .keywords #k1, .keywords #k2, .keywords #k3{
+        margin: auto;
+        /* margin-left: 10%; */
+        /* border: 10px solid hotpink; */
+        font-size: 2rem;
+        width: 100%;
+        margin: 0px;
+        
+    }
+    .keywords #k1{
+        text-align: center;
+    }
+    .keywords #k2{
+        text-align: end;
+    }
+    .keywords #k3{
+        text-align: start;
+    }
+
+
+}
+
+@media only screen and (max-width:540px){
+    /* and (min-width:450px) */
+    /* MODIFY FOOTER FIRST PORTION */
+    footer{
+        height: 400px;
+    }
+    footer .basic_menu{
+        display: none;
+    }
+    footer .mobile_footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Quicksand', sans-serif;
+        list-style: none;
+        height: 60%;
+    }
+    footer .mobile_footer li{
+        text-decoration: none;
+        list-style: none;
+        text-align: center;
+    }
+    footer .mobile_footer div, footer .mobile_footer ul{
+        margin: 10px auto;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 450px){
+    header{
+        position: unset;
+    }
+    main .title{
+        display: block;
+        position:unset;
+        text-align: center;
+        /* border: 10px solid red; */
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        font-size: 2.5rem;
+        visibility: visible;
+    }
+    .General{
+        display: block;
+        margin: auto;
+        /* border: 10px solid red;         */
+        position: unset;
+        width: 90%;
+        height: auto;
+        margin-bottom: 100px;
+        min-width:unset;
+    }
+    .aboutMe{
+        display: block;
+        width: 100%;
+        height: 50%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .keywords{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+    .skillset{
+        width: auto;
+        text-align: center;
+        display: block;
+        margin: auto;
+        position: unset;
+        /* border: 10px solid yellow; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 2.5rem;
+    }
+    .profession{
+        display: block;
+        position: unset;
+        margin: auto;
+        /* border: 10px solid blue; */
+        width: 90%;
+        min-width: unset;
+        height: 1300px;
+    }
+    .profession .images{
+        width: 100%;
+        height: 40%;    
+        margin: auto;
+    }
+    .profession .description{
+        width: 100%;
+        height: 60%;
+        margin: auto;
+    }
+
+    .software{
+        display: block;
+        position: unset;
+        margin: auto;
+        /* border: 10px solid purple; */
+        width: 90%;
+        min-width: unset;
+        height: auto;
+        margin-top: 100px;
+        
+    }
+    .software .description{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+    .software .software_images{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+    footer .contact_info{
+        /* border: 10px solid red; */
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+    }
+    footer .contact_info a{
+        width: 20%;
+        margin: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom:50px;
+        margin-top: 50px;
+        
+    }
+    footer .contact_info img{
+        text-align: center;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: auto;
+        
+    } 
+    .keywords{
+        /* border: 10px solid brown; */
+        width: 100%;
+        padding-left: 0px;
+        min-width:unset;
+        margin: auto;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .keywords #k1, .keywords #k2, .keywords #k3{
+        margin: auto;
+        /* margin-left: 10%; */
+        /* border: 10px solid hotpink; */
+        font-size: 2rem;
+        width: 100%;
+        margin: 0px;
+        
+    }
+    .keywords #k1{
+        text-align: center;
+    }
+    .keywords #k2{
+        text-align: end;
+    }
+    .keywords #k3{
+        text-align: start;
+    }
+
+    /* MODIFY HEADER STYLE */
+    header{
+        padding-top: 20px;
+        display: flex;
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+        /* border: 10px solid red; */
+    }
+    header nav{
+        margin: 20px 0px;
+        
+    }
+
+
+
+}
+
 
 
 

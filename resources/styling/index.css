@@ -5,15 +5,28 @@
     color: aliceblue;
     /* border: 1px solid red; */
 }
+
+body,html{
+    height: 100%;
+    margin: 0;
+}
+
+#wrapper{
+    height: 100%;
+    width: 100%;
+    position: sticky;
+    /* border: 10px solid brown; */
+}
+
 header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: relative;
     left: 0px;
     right: 0px;
     width:100%;
-    height: 100px;
+    height: 10%;
     z-index: 1;
 }
 
@@ -86,11 +99,12 @@ header li a{
 
 #greetings{
     font-size: 6rem;
-    width: auto;
+    width: 70%;
     height: fit-content;
     font-family: 'Unbounded', cursive;
     font-weight: bold;
     animation: fade 5s linear infinite;       
+    z-index: 20;
 }
 
 main{
@@ -98,14 +112,15 @@ main{
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
-    /* border: 1px solid red; */
+    /* border: 10px solid red; */
     display: flex;
     align-items: center;
     z-index: -1;
+    height: 80%;
 }
 
 .general_container{
-    /* border: 1px solid greenyellow; */
+    /* border: 10px solid greenyellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,7 +161,7 @@ main{
 }
 
 #text_intro{
-    padding-top: 5%;
+    padding-top: 0%;
     /* border: 1px solid blue; */
     width: 70%;
     height: fit-content;
@@ -214,7 +229,7 @@ footer{
     color: aliceblue;
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 10%;
     bottom: 0; 
 }
 footer img{
@@ -290,6 +305,324 @@ font-size: 60px;
     cursor: pointer;
 }
 
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1090px) and (min-width: 870px){
+    body,html{
+        height: 100%;
+        margin: 0;
+    }
+    header{
+        position: relative;
+        /* border: 10px solid red; */
+        height: 10%;
+    }
+    main{
+        display:block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        /* border: 0px solid greenyellow; */
+        margin-bottom: 500px;
+    }
+    .general_container{
+        display: block;
+        height: auto;
+        text-align: center;
+        margin-bottom: 15%;
+    }
+    #text_intro{
+        /* border: 10px solid orange; */
+        text-align: center;
+        margin: auto;
+        width: 100%;
+
+    }
+    #text_intro p{
+        text-align: justify;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #text_intro h2{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    #greetings{
+        font-size: 3.5rem;
+        text-align: center;
+        /* border: 10px solid pink; */
+        margin: auto;
+        margin-bottom: 30px;
+        height: 10%;
+    }
+    footer{
+        position: fixed;
+        width: 100%;
+        /* height: 300px; */
+        height: 10%;
+        /* border: 10px solid blueviolet; */
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    footer img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        position:absolute;
+        left: 0;
+        
+    }
+    footer a{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+        margin: 0px 10%;
+        /* border: 10px solid green; */
+        position: relative;
+    }
+    
+    #intro_container{
+        display: flex;
+        text-align: center;
+        /* border: 10px solid red; */
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        /* border: 10px solid grey; */
+        height: 90%;
+        margin-bottom: 500px;
+    }
+    .image_container{
+        margin: auto;
+        width: 60%;
+        /* border: 10px solid greenyellow; */
+        max-height:max-content;
+        margin-bottom: 10%;
+        
+    }
+    #intro_img{    
+        height: auto;
+        width: 100%;
+        opacity: 0.5;
+        align-self:normal;   
+        object-fit:fill;
+    }
+}
+@media only screen and (max-width:870px) and (min-width: 650px){
+    /* *{
+        background-color: blue;
+    }    */
+    header{
+        position: relative;
+        /* border: 10px solid red; */
+    }
+    main{
+        display:block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        /* border: 10px solid greenyellow; */
+    }
+    .general_container{
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    #text_intro{
+        /* border: 10px solid orange; */
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        
+    }
+    #text_intro p{
+        text-align: justify;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 50px;
+        font-size: 1rem;
+    }
+    #text_intro h2{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 1.8rem;
+    }
+    #greetings{
+        font-size: 2rem;
+        text-align: center;
+        /* border: 10px solid pink; */
+        margin: auto;
+        width: 100%;
+    }
+    footer{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        /* border: 10px solid blueviolet; */
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    footer img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        position:absolute;
+        left: 0;
+        
+        /* left: auto;
+        right: auto;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin:auto; */
+    }
+    /* footer img[alt="github"]{
+        left: auto;
+        right: auto;
+    } */
+    footer a{
+        /* display: inline-block; */
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+        margin: 0px 10%;
+        /* border: 10px solid green; */
+        position: relative;
+    }
+    
+    
+    #intro_container{
+        display: block;
+        text-align: center;
+        /* border: 10px solid red; */
+        /* flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        margin: auto;
+    }
+    .image_container{
+        margin: auto;
+        width: 60%;
+    }
+    #intro_img{    
+        height: auto;
+        width: 100%;
+        opacity: 0.5;
+        align-self:normal;   
+    }
+}
+
+@media only screen and (max-width:650px){
+    /* *{
+        background-color: blue;
+    }    */
+    header{
+        position: relative;
+        /* border: 10px solid red; */
+    }
+    header h1{
+        margin-top: 15px;
+    }
+    main{
+        display:block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        /* border: 10px solid purple; */
+    }
+    .general_container{
+        display: block;
+        height: auto;
+        text-align: center;
+        width: 95%;
+    }
+    #text_intro{
+        /* border: 10px solid orange; */
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        
+    }
+    #text_intro p{
+        text-align: justify;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 50px;
+        font-size: 1rem;
+    }
+    #text_intro h2{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 1.8rem;
+    }
+    #greetings{
+        font-size: 2rem;
+        text-align: center;
+        /* border: 10px solid pink; */
+        margin: auto;
+        width: 100%;
+        margin-top: 50px;
+    }
+    footer{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        /* border: 10px solid blueviolet; */
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    footer img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        position:absolute;
+        left: 0;
+    }
+
+    footer a{
+        /* display: inline-block; */
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+        margin: 0px 10%;
+        /* border: 10px solid green; */
+        position: relative;
+    }
+    
+    
+    #intro_container{
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    .image_container{
+        margin: auto;
+        width: 80%;
+    }
+    #intro_img{    
+        height: auto;
+        width: 100%;
+        opacity: 0.5;
+        align-self:normal;   
+    }
+    header{
+        display: flex;
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+    }
+    header nav{
+        margin: 20px 0px;
+        
+    }
+}
 
 
 
