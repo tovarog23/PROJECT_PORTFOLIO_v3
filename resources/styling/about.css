@@ -104,6 +104,7 @@ header:hover:before{
     font-family: 'Monoton', cursive;
     left: 17%;
     width: fit-content;
+    z-index: 12;
 }
 
 .General{
@@ -524,12 +525,47 @@ font-size: 60px;
     }
 }
 
+/* LOADING BAR ANIMATION*/
+
+@keyframes spin{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#loading_bar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #007bff;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    
+}
+
+#loading_background{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    z-index: 20;
+    transition: display 2s ease-in-out;
+}
+
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1145px) and (min-width:870px){
     header{
         position: relative;
-        
     }
     main .title{
         display: block;
@@ -590,6 +626,18 @@ font-size: 60px;
         font-size: 1.2rem;
     }
 
+    #slide-left{
+        transform: translateX(-4%);
+        opacity: 0;
+        transition: 1s;
+        /* background-color: red; */
+    }
+    #slide-right{
+        transform: translateX(4%);
+        opacity: 0;
+        transition: 1s;
+        /* background-color: red; */
+    }
 
 
 
@@ -608,6 +656,7 @@ font-size: 60px;
         margin: auto;
         margin-top: 50px;
         margin-bottom: 80px;
+        width: 90%;
     }
     .General{
         display: block;
@@ -639,6 +688,7 @@ font-size: 60px;
         /* border: 10px solid yellow; */
         margin-top: 50px;
         margin-bottom: 50px;
+        width: 80%;
     }
     .profession{
         display: block;
@@ -750,7 +800,18 @@ font-size: 60px;
     .keywords #k3{
         text-align: start;
     }
-
+    #slide-left{
+        transform: translateX(2%);
+        opacity: 0;
+        transition: 1s;
+        /* background-color: red; */
+    }
+    #slide-right{
+        transform: translateX(-2%);
+        opacity: 0;
+        transition: 1s;
+        /* background-color: red; */
+    } 
 
 }
 
@@ -783,10 +844,6 @@ font-size: 60px;
     footer .mobile_footer div, footer .mobile_footer ul{
         margin: 10px auto;
     }
-
-
-
-
 }
 
 @media only screen and (max-width: 450px){
@@ -976,9 +1033,16 @@ font-size: 60px;
         width: 100%;
     }
     #slide-left{
-        transform: translateX(0);
+        transform: translateX(-4%);
         opacity: 0;
         transition: 1s;
+        /* background-color: red; */
+    }
+    #slide-right{
+        transform: translateX(4%);
+        opacity: 0;
+        transition: 1s;
+        /* background-color: red; */
     }
 
 }

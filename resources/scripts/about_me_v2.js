@@ -125,7 +125,6 @@ const handleScroll = () =>{
   })
 }
 
-
 let projectButton = document.getElementById("Projects");
 projectButton.onclick = openNav;
 
@@ -135,8 +134,29 @@ exitButton[0].onclick = closeNav;
 let secondProjectButton = document.getElementById('Projects2');
 secondProjectButton.onclick = openNav;
 
+let HTMLBody = document.querySelector('body');
+HTMLBody.style.overflow = 'none';
+let loadingBackground = document.getElementById('loading_background');
 
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
+// Loading Spinner removal after a specific time to allow resources to load properly  
+const removeLoadingSpinner = () =>{
+  let loadingSpinner = document.getElementById('loading_bar');
+  loadingSpinner.style.display = "none";
+  loadingBackground.style.display = 'none';
+  console.log('LOADING SPINNER IS OFF NOW');
+  window.addEventListener('load', handleScroll);
+  window.addEventListener('scroll', handleScroll);
+  HTMLBody.style.overflow = 'auto';
+}
+window.onload = function(){
+  setTimeout(handleScroll, 1500);
+  setTimeout(removeLoadingSpinner, 1500);
+  
+}
 
-console.log(isElementInViewport(newVar));
+
+
+
+
+
+
