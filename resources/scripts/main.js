@@ -3,14 +3,9 @@
 let welcome_phrase = document.getElementById("greetings");
 
 const helloList = ["Hello","Konnichiwa","Hola","Kia Ora","Nǐn hǎo","Salve","Konnichiwa","Guten Tag","Olá","Goddag","Shikamoo","Goedendag","Yassas","Merhaba","Shalom"];
-
 let currentTextIndex = 0;
-console.log(helloList.length);
 const changeGreetings = () =>{
-    console.log('ITERATION');
-    console.log(currentTextIndex);
     currentTextIndex = (currentTextIndex + 1) % helloList.length;
-    console.log(currentTextIndex);
     var nextGreeting = helloList[currentTextIndex];
     welcome_phrase.innerHTML = nextGreeting;
 }

@@ -25,13 +25,10 @@ let imageFileNames = [['analysis.png', 'anchor.png', 'ARCH.png', 'struct.png'], 
 let academicImageNames = [['CONCRETE_DESIGN .JPG', 'FORCES_SAP200.JPG'], ['ANALYSIS.jpg', 'Image3.png', 'rot.JPG', 'sk2.JPG'], ['STEEL_DESIGN_PROJECT1.JPG', 'STEEL_DESIGN_PROJECT2.JPG', 'STEEL_DESIGN_PROJECT3.JPG', 'STEEL_DESIGN_PROJECT5.JPG'], ['DISPLACEMENTS.PNG', 'ELFP.PNG', 'MASONRY_BUILDING_OVERVIEW.PNG', 'PIER_LOADS.PNG', 'RS_GRAPH.PNG', 'TRIB_AREAS.PNG', 'WALLS_ETABS.PNG']];
 
 const projectNames = ['Drake', 'Fairfax', 'La_Porta', 'Hotel_Indigo','Viktor_Frankl', 'Fairfield-Inn', 'PetsGarden', 'Crown_Plaza', 'Embassy_Suites', 'Milenio', 'Woodsprings', 'Cruz_Roja', 'BridgeBar']; // In the same order as the items in the HTML file
-console.log(projectNames.length)
 const projectFolders = ['BridgeBar', 'Crown_Plaza', 'Cruz_Roja', 'Drake', 'Embassy_Suites', 'Fairfax', 'Fairfield-Inn', 'Hotel_Indigo', 'La_Porta', 'Milenio', 'PetsGarden', 'Viktor_Frankl', 'Woodsprings']; // exact order of folders in directory
 
 const academicNames = ['MIDASLATAM','Steel', 'UBC', 'Integrador'];//current order in html file
 const academicFolders = ['Integrador', 'MIDASLATAM', 'Steel', 'UBC']; // exact order of folders in directory
-
-console.log(projectFolders.length)
 
 function mapIndexes(originalArray, anotherArray) {
   let newArray = [];
@@ -41,9 +38,9 @@ function mapIndexes(originalArray, anotherArray) {
     return newArray
 }
 let folderMapping = mapIndexes(projectFolders, projectNames);
-console.log('folder mapping: ',folderMapping);
+// console.log('folder mapping: ',folderMapping);
 let academicMapping = mapIndexes(academicFolders, academicNames);
-console.log('academic mapping: ', academicMapping)
+// console.log('academic mapping: ', academicMapping)
 
 const pathBuilder = (fileName,  project, type) =>{
   if(type === 'project'){
@@ -64,14 +61,14 @@ const pathBuilderText = (fileName, type) =>{
 
 function rotateImages(finalImagePaths) {
     const slideshow = document.querySelector('.images');
-    console.log(slideshow);
+    // console.log(slideshow);
     let currentImageIndex = 0;
     // Function to show the next image
     function showNextImage() {
-      console.log('currentpaths: ',finalImagePaths)
-      console.log(slideshow.children);
+      // console.log('currentpaths: ',finalImagePaths)
+      // console.log(slideshow.children);
       let currentImage = slideshow.lastChild;
-      console.log('currentImage: ',currentImage);
+      // console.log('currentImage: ',currentImage);
       currentImage.classList.remove('active');
       currentImage.classList.add('entering-from-left');
 
@@ -90,7 +87,7 @@ function rotateImages(finalImagePaths) {
     }
 
     function showPreviousImage() {
-      console.log('currentpaths: ',finalImagePaths)
+      // console.log('currentpaths: ',finalImagePaths)
       // const currentImage = slideshow.querySelector('.active');
       let currentImage = slideshow.children[2];
       currentImage.classList.remove('active');
@@ -144,14 +141,14 @@ let imageContainers = document.getElementsByClassName('img_container one');
 let academicContainers = document.getElementsByClassName('img_container two');
 
 let popUp = document.getElementsByClassName('pop-up');
-console.log(popUp[0]);
+// console.log(popUp[0]);
 let htmlBody = document.getElementsByTagName('body');
-console.log(htmlBody[0]); // Will serve as the container for pop up backgroundj
+// console.log(htmlBody[0]); // Will serve as the container for pop up backgroundj
 let headerSection = document.getElementsByTagName('header');
 let popUpBackground = document.getElementById('dark-overlay');
 
 const fetchText = (textPath) =>{
-  console.log('final text path: ', textPath);
+  // console.log('final text path: ', textPath);
   fetch(textPath)
     .then(response => response.text())
     .then(text => {
@@ -170,8 +167,8 @@ const closePopup = () =>{
 
 const openPopup = (event) =>{
   popUpStatus = true;
-  console.log('Parent element',event.target.parentElement.classList.value);
-  console.log('ID: ', event.target.parentElement.id);
+  // console.log('Parent element',event.target.parentElement.classList.value);
+  // console.log('ID: ', event.target.parentElement.id);
 
   popUp[0].style.display = 'flex';
   htmlBody[0].style.overflow = 'hidden';
@@ -183,65 +180,65 @@ const openPopup = (event) =>{
   let nameTag;
 
   if(event.target.parentElement.classList.value === 'img_container one'){
-    console.log('CONTAINER 1')
+    // console.log('CONTAINER 1')
     nameTag = projectNames[itemNum-1];
     let folderPath = pathBuilder(nameTag,'','project');  
-    console.log(folderPath);
-    console.log(itemNum-1);
+    // console.log(folderPath);
+    // console.log(itemNum-1);
     let referenceIndex = folderMapping.indexOf(itemNum-1);
-    console.log(referenceIndex);
+    // console.log(referenceIndex);
     let finalImageNames = imageFileNames[referenceIndex];
-    console.log(finalImageNames);
+    // console.log(finalImageNames);
     finalImageNames.forEach(imageName=>{
       finalImagePaths.push(pathBuilder(imageName, nameTag, 'project'));
     });
-    console.log('FINAL IMAGE PATHS',finalImagePaths);
+    // console.log('FINAL IMAGE PATHS',finalImagePaths);
   }
   else{
-    console.log('CONTAINER 2')
+    // console.log('CONTAINER 2')
     let referenceDim = projectNames.length + 1;
     nameTag = academicNames[itemNum-referenceDim];  
-    console.log('NAME TAG',nameTag);
+    // console.log('NAME TAG',nameTag);
     let folderPath = pathBuilder(nameTag,'','academic');  
-    console.log(folderPath);
-    console.log(itemNum-1);
+    // console.log(folderPath);
+    // console.log(itemNum-1);
     let referenceIndex = academicMapping.indexOf(itemNum-referenceDim);
-    console.log('REFERENCE INDEXXXXX ',referenceIndex);
+    // console.log('REFERENCE INDEXXXXX ',referenceIndex);
     let finalImageNames = academicImageNames[referenceIndex];
-    console.log(finalImageNames);
+    // console.log(finalImageNames);
     finalImageNames.forEach(imageName=>{
       finalImagePaths.push(pathBuilder(imageName, nameTag, 'academic'));
     });
-    console.log('FINAL IMAGE PATHS',finalImagePaths);
+    // console.log('FINAL IMAGE PATHS',finalImagePaths);
   }
   // get the relevante image names
-  console.log('yes');
-  console.log('REPRINT',finalImagePaths);
+  // console.log('yes');
+  // console.log('REPRINT',finalImagePaths);
   rotateImages(finalImagePaths);
 
   let textPath;
   // Load Corresponding information for each project type
   if(event.target.parentElement.classList.value === 'img_container one'){
-    console.log('CONTAINER 1')
+    // console.log('CONTAINER 1')
     textPath = pathBuilderText(nameTag, 'project');
-    console.log('This is the TEXT PATH',textPath);  
+    // console.log('This is the TEXT PATH',textPath);  
   }
   else{
-    console.log('CONTAINER 2')
+    // console.log('CONTAINER 2')
     textPath = pathBuilderText(nameTag, 'academic');
-    console.log(textPath);
+    // console.log(textPath);
   }
   fetchText(textPath);
   // Update title based on item
   let projectTitle = document.getElementById(event.target.parentElement.id.toString()).children[2].innerHTML;
-  console.log(projectTitle);
+  // console.log(projectTitle);
   document.getElementsByClassName('project-title')[0].innerHTML = projectTitle;
 
 }
 
 
-console.log(imageContainers.length);
-console.log(imageContainers[0])
+// console.log(imageContainers.length);
+// console.log(imageContainers[0])
 
 for(let i=0; i<imageContainers.length; i++){
   imageContainers[i].addEventListener('click', openPopup);
@@ -258,7 +255,7 @@ closeButton[0].onclick = closePopup;
 
 document.onkeydown = function(e){
   if (popUpStatus && e.key == 'Escape'){
-    console.log('escape clicked');
+    // console.log('escape clicked');
     closePopup();
   }
 }
@@ -299,14 +296,10 @@ const handleScroll = () =>{
 }
 
 const slideTitle = () =>{
-  console.log('hello world');
-
   let slideTitle = document.getElementById('slideTitle');
-  console.log(slideTitle);
   // animation
   slideTitle.style.opacity = 1;
   slideTitle.style.transform = 'translateX(0)';
-
 }
 
 slideTitle();

@@ -1,14 +1,6 @@
-
 let imageArray = ['./resources/images/skillset/LA PORTA STEEL.JPG', './resources/images/skillset/CONNECTIONS.PNG', './resources/images/skillset/DISPLACEMENTS.PNG', './resources/images/skillset/DRAKE ARCH.PNG', './resources/images/skillset/DRAKE ARCH 2.PNG', './resources/images/skillset/FAIRFAX CORNERS.jpg', './resources/images/skillset/Image3.png'];
 let newVar = document.getElementById('slide-left');
 let slider = document.getElementById('slide-right');
-console.log(newVar.id);
-console.log(slider.id);
-console.log(newVar.style.display);
-console.log(newVar.style.opacity);
-console.log(slider.style.opacity);
-console.log(document.documentElement.clientHeight);
-console.log(newVar.getBoundingClientRect());
 newVar.style.opacity = 1;
 
 // Function to handle image rotation
@@ -19,7 +11,7 @@ function rotateImages() {
     // Function to show the next image
     function showNextImage() {
       const currentImage = slideshow.querySelector('.active');
-      console.log(currentImage);
+      // console.log(currentImage);
       currentImage.classList.remove('active');
       currentImage.classList.add('entering-from-left');
   
@@ -71,7 +63,7 @@ function rotateImages() {
     const initialImage = createImageElement(imageArray[currentImageIndex]);
     initialImage.classList.add('active');
     slideshow.appendChild(initialImage);
-    console.log(initialImage);
+    // console.log(initialImage);
   
     // Set interval to automatically change images every 5 seconds
     // setInterval(showNextImage, 5000);
@@ -143,7 +135,7 @@ const removeLoadingSpinner = () =>{
   let loadingSpinner = document.getElementById('loading_bar');
   loadingSpinner.style.display = "none";
   loadingBackground.style.display = 'none';
-  console.log('LOADING SPINNER IS OFF NOW');
+  // console.log('LOADING SPINNER IS OFF NOW');
   window.addEventListener('load', handleScroll);
   window.addEventListener('scroll', handleScroll);
   HTMLBody.style.overflow = 'auto';
