@@ -477,7 +477,7 @@ header li:hover{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 15;
+    z-index: 21;
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
@@ -547,7 +547,7 @@ font-size: 60px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
+    z-index: 25;
     
 }
 
